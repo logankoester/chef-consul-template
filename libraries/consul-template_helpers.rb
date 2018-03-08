@@ -5,7 +5,7 @@ class Chef::Recipe::ConsulTemplateHelpers
     end
 
     def install_extension
-      '.zip'
+      '.tgz'
     end
 
     def install_file(node)

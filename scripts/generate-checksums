@@ -17,7 +17,7 @@ files=()
 function get_files {
   for system in "${systems[@]}"
   do
-    file=("consul-template_${version}_${system}.zip")
+    file=("consul-template_${version}_${system}.tgz")
     files+=(${file})
   done
 }
@@ -32,7 +32,7 @@ function print_checksums {
     if [ "$checksum" = "$empty_sha" ]; then
       >&2 echo "Failed to get binary: $binary"
     else
-      echo "'${file//.zip}' => '$checksum',"
+      echo "'${file//.tgz}' => '$checksum',"
     fi
   done
 }
